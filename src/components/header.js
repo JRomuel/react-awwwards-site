@@ -6,7 +6,7 @@ import gsap from "gsap";
 
 let tl = gsap.timeline();
 
-const Header = ({ dimension }) => {
+const Header = () => {
   const [menuState, setMenuState] = useState({
     menuOpened: false
   });
@@ -23,7 +23,7 @@ const Header = ({ dimension }) => {
         tl.to('body', { duration: 0.01, css: { overflow: "hidden"} })
         .to('.App',{
             duration: 1,
-            y: dimension.width <= 500 ? '100vh' : '70vh'  ,
+            y: '70vh',
             ease: "expo.inOut"
         })
         .to('.humburger-menu span', {
